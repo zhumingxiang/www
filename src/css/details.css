@@ -58,6 +58,48 @@ img {
   border: 1px solid #ccc;
 }
 
+#cartTop {
+  width: 1202px;
+  height: 30px;
+  padding: 0 82px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  line-height: 30px;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+#cartTop ul {
+  float: right;
+}
+
+#cartTop ul li {
+  float: left;
+  list-style: none;
+}
+
+#cartTop .erwei {
+  position: absolute;
+  top: 31px;
+  left: 1200px;
+  z-index: 1;
+  display: none;
+}
+
+#hint {
+  width: 1202px;
+  height: auto;
+  padding: 0 82px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#hint span {
+  position: absolute;
+  top: 40px;
+  left: 640px;
+}
+
 #menu2 {
   width: 1202px;
   height: 30px;
@@ -187,7 +229,7 @@ img {
 }
 
 #main {
-  width: 1212px;
+  width: 1200px;
   height: 560px;
   margin: 0 82px 10px 82px;
   background-color: #fff;
@@ -195,7 +237,7 @@ img {
 }
 
 #main .head {
-  width: 1212px;
+  width: 1200px;
   height: 40px;
   margin: 10px auto;
   border-top: 1px solid #ccc;
@@ -340,15 +382,16 @@ img {
 }
 
 #center {
-  width: 592px;
+  width: 480px;
   height: 480px;
-  padding: 10px;
+  padding: 10px 0 10px 30px;
   float: left;
   position: relative;
+  margin-right: 10px;
 }
 
 #price {
-  width: 570px;
+  width: 460px;
   height: 100px;
   padding: 10px;
   margin: 5px auto;
@@ -376,34 +419,85 @@ img {
   border: 1px dotted #ccc;
 }
 
-#center #pieces {
-  width: 51px;
-  height: 38px;
-  border: 1px solid #ccc;
+#center .pieces {
+  width: 400px;
+  height: 40px;
   margin: 20px 0;
+  position: relative;
+  line-height: 40px;
 }
 
-#center #pieces span {
-  padding: 10px;
+#center .pieces span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 18px;
+  color: red;
 }
 
-#center #pieces button {
-  width: 20px;
-  height: 18px;
-  float: right;
+#center .pieces button {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 18px;
 }
 
-#center #addToCart {
+#center .pieces a {
   position: absolute;
-  top: 370px;
-  left: 80px;
+  top: 2px;
+  left: 210px;
+}
+
+#addToCart {
+  height: 36px;
+  width: 450px;
+  margin-bottom: 30px;
+}
+
+#addToCart a {
+  display: inline-block;
+  width: 136px;
+  height: 34px;
+  font-size: 16px;
+  line-height: 34px;
+  margin: 0 30px;
+  border: 2px solid #e14958;
+}
+
+#addToCart .cartA {
+  position: relative;
+  top: -12px;
+  text-align: center;
+  color: #e14958;
+}
+
+#center ul li {
+  list-style: none;
+  float: left;
+  margin: 0 25px;
+}
+
+#center ul li span {
+  position: relative;
+  top: -5px;
 }
 
 #right {
-  width: 203px;
+  width: 250px;
   height: 480px;
   padding: 10px;
   float: left;
+}
+
+#right dl {
+  padding: 0 41px;
+  margin-bottom: 20px;
+}
+
+#right dl dd {
+  text-align: center;
 }
 
 /*# sourceMappingURL=details.css.map */

@@ -89,57 +89,41 @@ $(function(){
         },500);
     });
 
-    /*
-    var center=$("center");
-    var h2=center.getElementsByTagName("h2")[0];
-    var tds=center.getElementsByTagName("td");
-    var pieces=$("pieces");
-    var piecespan=pieces.getElementsByTagName("span")[0];
-    var btn1=pieces.getElementsByTagName("button")[0];
-    var btn2=pieces.getElementsByTagName("button")[1];
-    var piece=1;
-    btn1.onclick=function(){
-        piece++;
-        piecespan.innerHTML=piece;
-    }
-    btn2.onclick=function(){
-        piece--;
-        if(piece==0){
-            piece=1;
+    //商品数量的添加与减少
+    $(".pieces button").eq(1).bind("click",function(){
+        var _pieces=$(".pieces span:first").html();
+        _pieces++;
+        if(_pieces>=3){
+            _pieces=3;
         }
-        piecespan.innerHTML=piece;
-    }
-
-    for( var i=0; i<tds.length; i++ ){
-        tds[i].onclick=function(){
-            for( var j=0; j<tds.length; j++ ){
-                tds[j].style.border="1px solid #ccc";
-            }
-            this.style.border="1px solid red";
+        $(".pieces span:first").html(_pieces);
+    });
+    $(".pieces button").eq(0).bind("click",function(){
+        var _pieces=$(".pieces span:first").html();
+        _pieces--;
+        if(_pieces<=1){
+            _pieces=1;
         }
-    }
+        $(".pieces span:first").html(_pieces);
+    });
 
-    var addToCart=$("addToCart");
-    var price=$("price");
+    //写入cookies 图片路径 名称 价格 数量
+    $("#addToCart a").eq(1).click(function(){
+        var _imgSrc=$("#big img:first").attr("src");
+        var _goodsName = $("#center h2").html();
+        var _goodsPrice= $("#price span:first").html();
+        console.log($(".pieces span:first").html());
+        var _goodsPieces=$(".pieces span:first").html();
+        $.cookie.setAll("goods1",{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
+        //window.open("../index.html","_self");
+    });
 
-    var pricespan=price.getElementsByTagName("span")[0];
 
-    var addimage=fd.getElementsByTagName("img")[5];
-
-    var price=pricespan.innerHTML;
-    var pname=h2.innerHTML;
-    var imgsrc=addimage.getAttribute("src");
-
-    //console.log(imgsrc);
-    //console.log(price.innerHTML);
-
-    //console.log(_value.innerHTML);
-    addToCart.onclick=function(){
-        var pieces=$("pieces");
-        var piecespan=pieces.getElementsByTagName("span")[0];
-        var jiage=piecespan.innerHTML;
-        var _value="imgsrc:"+imgsrc+"&pname:"+pname+"&price:"+price+"&pieces:"+jiage;
-        setCookie("name",_value,31);
-    }*/
 
 });
+function _getDate(num){
+    var d = new Date();
+    d.setDate(d.getDate() + num);
+    return d;
+}
+
