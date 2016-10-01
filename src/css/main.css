@@ -1,0 +1,786 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 12px;
+  color: #333333;
+}
+
+img {
+  border: none;
+}
+
+.userA {
+  color: #666666;
+}
+.userA:hover {
+  color: red;
+  text-decoration: underline;
+}
+.userA:active {
+  color: blue;
+}
+
+._shadow {
+  box-shadow: 0px 0px 8px #f00;
+}
+
+.shBorder {
+  border: 1px solid #e5e5e5;
+}
+
+.tab {
+  background-color: #e14958;
+  color: #fff;
+}
+
+.tableDisplay {
+  z-index: 2;
+}
+
+.tsSpan1 {
+  font-size: 16px;
+  color: red;
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#top {
+  width: 1202px;
+  height: 30px;
+  padding: 0 82px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  line-height: 30px;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+#top ul {
+  float: right;
+}
+
+#top ul li {
+  float: left;
+  list-style: none;
+}
+
+#top .erwei {
+  position: absolute;
+  top: 31px;
+  left: 1200px;
+  z-index: 1;
+  display: none;
+}
+
+#search {
+  width: 1202px;
+  height: 117px;
+  padding: 0 82px;
+  position: relative;
+  margin: 0 auto;
+}
+
+#search form {
+  position: absolute;
+  top: 30px;
+  left: 610px;
+  width: 392px;
+  height: 36px;
+  border: 2px solid #6b4185;
+}
+
+#search form input {
+  width: 291px;
+  padding: 0 10px;
+  height: 36px;
+  border: none;
+  float: left;
+}
+
+#search form button {
+  width: 81px;
+  height: 36px;
+  border: none;
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  background-color: #6b4185;
+}
+
+#search .cart {
+  position: absolute;
+  top: 30px;
+  left: 1073px;
+  display: inline-block;
+  width: 168px;
+  height: 38px;
+  border: 1px solid #ccc;
+  font: bold 14px/18px 瀹嬩綋;
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+
+#search .cart span {
+  float: right;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+}
+
+#search ul {
+  position: absolute;
+  top: 76px;
+  left: 610px;
+}
+
+#search ul li {
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+}
+
+#menu {
+  width: 1202px;
+  height: 30px;
+  padding: 0 82px;
+  background-color: #000;
+  position: relative;
+  margin: 0 auto;
+  font: 18px/30px 瀹嬩綋;
+  color: #fff;
+}
+
+#menu span {
+  display: inline-block;
+  width: 220px;
+  height: 30px;
+  background-color: #654579;
+  position: relative;
+  cursor: pointer;
+}
+
+#menu span b {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 60px;
+}
+
+#menu span img {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 140px;
+}
+
+#menu .ul1 {
+  display: inline-block;
+}
+
+#menu .ul1 li {
+  list-style: none;
+  float: left;
+}
+
+#menu .ul1 li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px 0 35px;
+}
+#menu .ul1 li a:hover {
+  color: red;
+  text-decoration: underline;
+  text-decoration: none;
+}
+#menu .ul1 li a:active {
+  color: green;
+  text-decoration: none;
+}
+
+#menu .hide {
+  position: absolute;
+  top: 30px;
+  left: 82px;
+  width: 220px;
+  height: 480px;
+  background-color: #e8e3eb;
+  z-index: 100;
+  display: none;
+}
+
+#menu .hide li {
+  list-style: none;
+  padding: 15px 0 2px 0;
+  width: 220px;
+  height: 102px;
+  border-bottom: 1px dotted #ccc;
+}
+
+#menu .hide li div {
+  width: 180px;
+  height: 101px;
+  padding: 0 20px;
+}
+
+#menu .hide a {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#menu .hide li div .first {
+  display: block;
+}
+
+#menu .hide .last {
+  border-bottom: none;
+}
+
+#menu .liHide {
+  padding: 35px;
+  position: absolute;
+  top: 30px;
+  left: 302px;
+  background-color: #fff;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 12px;
+  display: none;
+}
+
+#menu .liHide .lihideUl {
+  margin-top: 20px;
+}
+
+#menu .liHide .lihideUl li {
+  list-style: none;
+  float: left;
+}
+
+#menu .liHide .lihideUl li ul li {
+  list-style: none;
+  float: left;
+  padding: 0 30px 0 0;
+  height: auto;
+}
+
+#menu .liHide .lihideUl li ul li a {
+  margin-right: 10px;
+}
+
+#banner {
+  width: 1366px;
+  height: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#banner img {
+  width: 1366px;
+  height: 480px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#banner .imgFirst {
+  z-index: 10;
+}
+
+#banner #codeN {
+  position: absolute;
+  top: 420px;
+  left: 605px;
+  width: 170px;
+  height: 22px;
+  z-index: 23;
+}
+
+#banner #codeN a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+}
+#banner #codeN a:hover {
+  color: red;
+  text-decoration: underline;
+  text-decoration: none;
+}
+#banner #codeN a:active {
+  color: blue;
+  text-decoration: none;
+}
+
+#find {
+  width: 1202px;
+  height: auto;
+  padding: 0 92px 0 72px;
+  background-color: #f9f9f9;
+  position: relative;
+  margin: 20px auto 0 auto;
+}
+
+#find h5 img {
+  display: block;
+  margin: 0 auto;
+}
+
+#find table {
+  border-spacing: 15px;
+}
+
+#find table tr td {
+  position: relative;
+}
+
+#find table tr td:hover {
+  box-shadow: 0px 0px 8px #f00;
+}
+
+#find table tr td p {
+  padding: 15px 20px;
+}
+
+#find table tr td .p2 {
+  padding: 0px 20px 25px 20px;
+  color: red;
+}
+
+#find table tr td p b {
+  font-size: 22px;
+  color: red;
+}
+
+#find table tr td p span {
+  float: right;
+}
+
+#find table tr td .divCart1 {
+  position: absolute;
+  top: 238px;
+  left: 0px;
+  cursor: pointer;
+  display: none;
+}
+
+#find table tr td ul li {
+  list-style: none;
+  float: left;
+}
+
+#find table tr td ul li img {
+  display: inline-block;
+}
+
+#find table tr td .divCart2 {
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 283px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#shenma {
+  width: 1202px;
+  height: auto;
+  padding: 20px 82px 5px 82px;
+  background-color: #f9f9f9;
+  position: relative;
+  margin: 0 auto;
+}
+
+#shenma ul {
+  width: 1140px;
+  height: 175px;
+  padding: 20px 31px 10px 31px;
+  background-color: #fff;
+  margin: 0 auto 20px 0;
+}
+
+#shenma ul li {
+  margin: 10px;
+  float: left;
+  list-style: none;
+}
+
+#shenma ul li:hover {
+  box-shadow: 0px 0px 8px #48aeec;
+}
+
+#shenma #good {
+  width: 1202px;
+  height: 1000px;
+  padding: 35px 0px;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto 20px auto;
+}
+
+#shenma #good div {
+  width: 1128px;
+  height: 30px;
+  padding: 0 37px;
+  border-bottom: 1px solid #cccccc;
+  margin: 0 auto;
+}
+
+#shenma #good div span {
+  display: inline-block;
+  padding: 0 20px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin-right: 15px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#shenma table {
+  width: 1082px;
+  padding: 0px 60px;
+  border-spacing: 40px;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+}
+
+#shenma table tr td {
+  width: 280px;
+  height: auto;
+  padding: 15px;
+}
+
+#shenma table tr td:hover {
+  box-shadow: 0px 0px 8px #48aeec;
+}
+
+#shenma table tr td p {
+  margin-bottom: 10px;
+}
+
+#shenma table tr td p b {
+  font-size: 20px;
+  color: red;
+}
+
+#buyAgain {
+  width: 1170px;
+  height: 460px;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto 20px auto;
+}
+
+#buyAgain .table {
+  width: 1170px;
+  height: 40px;
+}
+
+#buyAgain .table span {
+  font: bold 16px/40px 瀹嬩綋;
+  color: red;
+  text-align: center;
+  display: inline-block;
+  width: 380px;
+  height: 40px;
+}
+
+#buyAgain .accordion {
+  width: 370px;
+  height: 460px;
+  position: relative;
+  float: left;
+  margin: 0 10px;
+}
+
+#buyAgain .accordion h3 {
+  width: 330px;
+  height: 30px;
+  border: none;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+
+#buyAgain .accordion h3 .zdimg1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#buyAgain .accordion h3 .zdimg2 {
+  position: absolute;
+  top: 0px;
+  left: 45px;
+}
+
+#buyAgain .accordion div {
+  width: 300px;
+  height: 180px;
+  border: none;
+}
+
+#buyAgain .accordion div dl dt {
+  float: left;
+}
+
+#buyAgain .accordion div dl dd {
+  margin-bottom: 10px;
+}
+
+#buyAgain .accordion div dl dd b {
+  color: red;
+  font-size: 16px;
+}
+
+#blackHorse {
+  width: 1202px;
+  height: 1000px;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto 20px auto;
+}
+
+#blackHorse table {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#flashSales {
+  width: 1202px;
+  height: 1350px;
+  padding: 0 82px 0 82px;
+  background-color: #f9f9f9;
+  position: relative;
+  margin: 0 auto;
+}
+
+#flashSales h5 img {
+  display: block;
+  margin: 0 auto;
+}
+
+#flashSales .left {
+  width: 787px;
+  height: 1210px;
+  background-color: #f9f9f9;
+}
+
+#flashSales .left dl {
+  width: 787px;
+  height: 281px;
+  background-color: #fff;
+  margin: 10px 0 20px 0;
+}
+
+#flashSales .left dl:hover {
+  box-shadow: 0px 0px 8px blue;
+}
+
+#flashSales .left dl dt {
+  float: left;
+}
+
+#flashSales .left dl dd {
+  padding: 20px 50px 0 0px;
+}
+
+#flashSales .left dl dd b {
+  color: red;
+  font-size: 20px;
+}
+
+#flashSales .left dl dd span {
+  float: right;
+}
+
+#flashSales .left dl dd .aBuy {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: red;
+  color: #fff;
+}
+
+#flashSales .right {
+  position: absolute;
+  top: 125px;
+  left: 890px;
+  width: 387px;
+  height: 1210px;
+  background-color: #f9f9f9;
+}
+
+#flashSales .right dl {
+  width: 387px;
+  height: 193px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+
+#flashSales .right dl:hover {
+  box-shadow: 0px 0px 8px blue;
+}
+
+#flashSales .right dl dt {
+  float: left;
+}
+
+#flashSales .right dl dd {
+  padding: 10px 10px 0 0px;
+}
+
+#flashSales .right dl dd b {
+  color: red;
+  font-size: 14px;
+}
+
+#flashSales .right dl dd span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#flashSales .right dl dd .aBuy {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: red;
+  color: #fff;
+  float: right;
+}
+
+#bottom {
+  width: 1366px;
+  height: auto;
+  background-color: #ffffff;
+  position: relative;
+  margin: 0 auto;
+}
+
+#bottom table {
+  width: 1366px;
+  height: 80px;
+  padding: 0 200px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 8px #000;
+  border-spacing: 0;
+}
+
+#bottom table tr td {
+  width: 281px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#bottom table tr .td1 {
+  background: url("../images/zhenghe.jpg") no-repeat 0 0;
+}
+
+#bottom table tr .td2 {
+  background: url("../images/zhenghe.jpg") no-repeat 0 -81px;
+}
+
+#bottom table tr .td3 {
+  background: url("../images/zhenghe.jpg") no-repeat 0 -161px;
+}
+
+#bottom table tr .td4 {
+  background: url("../images/zhenghe.jpg") no-repeat 0 -241px;
+}
+
+#bottom .footer {
+  width: 1156px;
+  height: 300px;
+  padding: 0 105px;
+  background-color: #f9f9f9;
+  position: relative;
+  margin: 0 auto;
+}
+
+#bottom .footer div {
+  width: 986px;
+  padding: 5px 50px;
+  height: 105px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+#bottom .footer div .span1 {
+  font-size: 18px;
+  position: absolute;
+  top: 25px;
+  left: 40px;
+}
+
+#bottom .footer div .span2 {
+  font-size: 18px;
+  position: absolute;
+  top: 25px;
+  left: 550px;
+}
+
+#bottom .footer div .span3 {
+  font-size: 14px;
+  position: absolute;
+  top: 55px;
+  left: 35px;
+}
+
+#bottom .footer div .span4 {
+  font-size: 14px;
+  line-height: 24px;
+  position: absolute;
+  top: 55px;
+  left: 545px;
+}
+
+#bottom .footer p {
+  font-size: 14px;
+}
+
+#bottom .footer .p1 {
+  position: absolute;
+  top: 140px;
+  left: 340px;
+}
+
+#bottom .footer .p2 {
+  position: absolute;
+  top: 180px;
+  left: 340px;
+}
+
+#bottom .footer .p3 {
+  position: absolute;
+  top: 250px;
+  left: 210px;
+}
+
+/*# sourceMappingURL=main.css.map */

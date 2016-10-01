@@ -1,0 +1,17 @@
+@mixin userA($aHover,$aActive){
+  color: #fff;
+  text-decoration: none;
+  &:hover{ color:$aHover; text-decoration: underline; text-decoration: none;}
+  &:active{ color: $aActive;text-decoration: none; }
+}
+@mixin userLi{
+  list-style: none;
+}
+@mixin userPosition($ulTop,$ulleft){
+  position: absolute;
+  top:$ulTop+px;
+  left: $ulleft+px;
+}
+@mixin tdPosition($photoUlr,$_left,$_top){
+  background: url($photoUrl) no-repeat $_left+"px" $_top+"px";
+}
