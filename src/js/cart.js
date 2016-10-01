@@ -3,6 +3,7 @@
  */
 $(function(){
     //cart页面上，达令app二维码的显示与隐藏
+    
     //console.log($("#top>ul").children().eq(3));
     $("#cartTop>ul").children().eq(5).bind("mouseover",function(){
         $("#cartTop>.erwei").css("display","block");
