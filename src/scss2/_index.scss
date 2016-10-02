@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixin";
+
 #cartTop {
   width: 1202px;
   height: 30px;
@@ -10,16 +11,13 @@
   border: 1px solid #cccccc;
   position: relative;
 }
-
 #cartTop ul {
   float: right;
 }
-
 #cartTop ul li {
   float: left;
   list-style: none;
 }
-
 #cartTop .erwei {
   position: absolute;
   top: 31px;
@@ -36,9 +34,129 @@
   margin: $userMargin;
 }
 #hint span{
-  @include userPosition(40,640);
+  @include userPosition(40,663);
 }
 
+#cartList{
+  width:1202px;
+  height:auto;
+  padding: 0 82px;
+}
+#cartList .top{
+  width:1202px;
+  height:auto;
+}
+#cartList .top div{
+  width:1162px;
+  padding: 10px 20px;
+  height:auto;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  position: relative;
+}
+#cartList .top div b{
+  margin:0 70px;
+}
+#cartList .top div img{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+#cartList .top div input{
+  @include userPosition(10,40);
+}
+#cartList .top div img{
+  position: relative;
+  left: 50px;
+}
+#cartList .top div a{
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  position:relative;
+  top: -50px;
+  left: 80px;
+}
+#cartList .top div span{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  top: -50px;
+  left: 125px;
+}
+#cartList .top div table{
+  @include userPosition(40,625);
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 18px;
+  font-weight: bold;
+}
+#cartList .top div table tr td{
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  cursor:pointer;
+}
+#cartList .top div .cartSpan{
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  top: -50px;
+  left: 440px;
+  color: red;
+}
+#cartList .top div .del{
+  font-size: 16px;
+  position: relative;
+  top: -50px;
+  left: 600px;
+  cursor: pointer;
+}
+#cartList .top div .del:hover{
+  text-decoration: underline;
+}
+#cartList .bottom{
+  width:1202px;
+  height:60px;
+  border: 1px solid #000;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+  line-height: 60px;
+  position: relative;
+}
+#cartList .bottom input{
+  margin: 0 0 0 40px;
+}
+#cartList .bottom span{
+  margin: 0 30px 0 20px;
+}
+#cartList .bottom .jsA{
+  margin: 0 50px;
+  cursor: pointer;
+}
+#cartList .bottom b{
+  color: red;
+  font-weight: bold;
+}
+#cartList .bottom .cartP1{
+  @include userPosition(-10 ,900);
+}
+#cartList .bottom .cartP1 span{
+  font-size: 20px;
+  color: red;
+}
+#cartList .bottom .cartP2{
+  @include userPosition(10 ,900);
+}
+#cartList .bottom .accounts{
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  background-color: #f25e5a;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  float: right;
+}
 #menu2{
   width:1202px;
   height:30px;
