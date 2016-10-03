@@ -380,6 +380,7 @@ img {
   top: 238px;
   left: 0px;
   cursor: pointer;
+  z-index: 1000;
   display: none;
 }
 
@@ -609,7 +610,7 @@ img {
 }
 
 #flashSales .left dl dd {
-  padding: 20px 50px 0 0px;
+  padding: 10px 50px 0 0px;
 }
 
 #flashSales .left dl dd b {
@@ -781,6 +782,50 @@ img {
   position: absolute;
   top: 250px;
   left: 210px;
+}
+
+#sidebar {
+  width: 40px;
+  height: 800px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+#sidebar ul {
+  width: 40px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  right: 0;
+}
+
+#sidebar ul img {
+  position: relative;
+  right: 10px;
+}
+
+#sidebar ul li {
+  list-style: none;
+  width: 40px;
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#sidebar ul li:hover {
+  background-color: #dc4b5c;
+}
+
+#sidebar ul li a {
+  display: inline-block;
+  width: 20px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -115,7 +115,7 @@ $(function(){
         console.log($(".pieces span:first").html());
         var _goodsPieces=$(".pieces span:first").html();
         $.cookie.setAll("goods1",{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
-        //window.open("../index.html","_self");
+        //window.open("cart.html");
     });
 
 

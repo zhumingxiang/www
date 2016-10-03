@@ -239,6 +239,7 @@
 #find table tr td .divCart1{
   @include userPosition(238,0);
   cursor: pointer;
+  z-index: 1000;
   display: none;
 }
 #find table tr td ul li{
@@ -426,7 +427,7 @@
   float: left;
 }
 #flashSales .left dl dd{
-  padding: 20px 50px 0 0px;
+  padding: 10px 50px 0 0px;
 }
 #flashSales .left dl dd b{
   color: red;
@@ -555,4 +556,43 @@
 }
 #bottom .footer .p3{
   @include userPosition(250,210);
+}
+
+#sidebar{
+  width: 40px;
+  height: 800px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  font-size: 20px;
+  color: #fff;
+}
+#sidebar ul{
+  width: 40px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  right: 0;
+}
+#sidebar ul img{
+  position: relative;
+  right: 10px;
+}
+#sidebar ul li{
+  @include userLi;
+  width: 40px;
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+#sidebar ul li:hover{
+  background-color: #dc4b5c;
+}
+#sidebar ul li a{
+  display: inline-block;
+  width: 20px;
+  color: #fff;
 }

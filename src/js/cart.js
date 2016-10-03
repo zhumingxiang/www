@@ -93,12 +93,15 @@ $(function(){
     //全选功能
     console.log($("#cartList input:checkbox"));
     $("#cartList .bottom input:checkbox").bind("click",function(){
-        $("#cartList .top input:checkbox").attr({checked:"checked"});
+        $("#cartList .top div").children("input:checkbox").attr({checked:"checked"});
         $("#cartList .bottom b").html( $("#cartList .top .cs2").html() );
         $("#cartList .bottom .cartP1 span").html( $("#cartList .cartSpan").html() );
-
     });
 
+    //删除选中商品
+    $("#cartList .bottom .jsA:first").bind("click",function(){
+        $("#cartList .top input:checked")
+    });
 
 });
 function _getDate(num){
