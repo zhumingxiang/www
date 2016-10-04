@@ -828,4 +828,8 @@ img {
   color: #fff;
 }
 
+#sidebar ul li a span {
+  color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

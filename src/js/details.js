@@ -80,7 +80,7 @@ $(function(){
     //消费者告知书的隐藏与显示
     $("#inform span").bind("mouseover",function(){
         $("#inform").addClass("inform");
-        $("#inform").stop().animate({ height:"350px" },1000);
+        $("#inform").stop().animate({ height:"430px" },1000);
     });
     $("#inform span").bind("mouseout",function(){
         $("#inform").stop().animate({ height:"10px" },500);
@@ -116,6 +116,15 @@ $(function(){
         var _goodsPieces=$(".pieces span:first").html();
         $.cookie.setAll("goods1",{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
         //window.open("cart.html");
+        alert("添加购物车成功");
+    });
+
+    //tab功能（li的移上事件）
+    $("#main .detailsUl li").bind("click",function(){
+        $("#main .detailsUl li").css({height:"41px", border:"none", borderBottom: "1px solid #000"});
+        $(this).css({borderBottom:"none", borderTop:"3px solid blue", borderLeft: "1px solid blue",borderRight: "1px solid blue"});
+        $("#main .details").css("zIndex","0");
+        $("#main .details").eq($(this).index()).css("zIndex","10");
     });
 
 

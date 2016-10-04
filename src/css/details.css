@@ -58,6 +58,13 @@ img {
   border: 1px solid #ccc;
 }
 
+.liHover {
+  border-bottom: none;
+  border-top: 3px solid blue;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+}
+
 #cartTop {
   width: 1202px;
   height: 30px;
@@ -390,10 +397,11 @@ img {
 
 #main {
   width: 1200px;
-  height: 560px;
+  height: 4250px;
   margin: 0 82px 10px 82px;
   background-color: #fff;
   border: 1px solid #ccc;
+  position: relative;
 }
 
 #main .head {
@@ -527,7 +535,7 @@ img {
   padding: 20px 10px;
   height: 10px;
   overflow: hidden;
-  z-index: 10;
+  z-index: 100;
   position: absolute;
   top: 440px;
   left: 150px;
@@ -658,6 +666,57 @@ img {
 
 #right dl dd {
   text-align: center;
+}
+
+#main .detailsUl {
+  width: 1200px;
+  height: 41px;
+  font-size: 20px;
+  position: absolute;
+  top: 570px;
+  left: 0px;
+}
+
+#main .detailsUl li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 50px;
+  height: 41px;
+  line-height: 41px;
+  float: left;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+#main .detailsUl ._liFirst {
+  border-bottom: none;
+  border-top: 3px solid blue;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+}
+
+#main .details {
+  position: absolute;
+  top: 640px;
+  left: 0px;
+  width: 1199px;
+  height: 3605px;
+}
+
+#main .sno1 {
+  z-index: 10;
+}
+
+#main .sno2 {
+  background-color: red;
+}
+
+#main .sno3 {
+  background-color: green;
+}
+
+#main .sno4 {
+  background-color: blue;
 }
 
 #register {
@@ -850,6 +909,177 @@ img {
   cursor: pointer;
   color: #fff;
   font-size: 18px;
+}
+
+#searchList {
+  width: 1200px;
+  height: auto;
+  margin: 0 82px 10px 82px;
+  background-color: #fff;
+}
+
+#searchList .head {
+  width: 1200px;
+  height: 40px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  position: relative;
+}
+
+#searchList .head a {
+  position: relative;
+  padding: 7px 12px;
+  top: -15px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+}
+
+#searchList .head form {
+  position: absolute;
+  top: 7px;
+  left: 210px;
+  width: 172px;
+  height: 23px;
+  border: 1px solid #ccc;
+}
+
+#searchList .head form input {
+  width: 127px;
+  padding: 0 10px;
+  height: 23px;
+  border: none;
+  float: left;
+}
+
+#searchList .head button {
+  width: 25px;
+  height: 23px;
+  border: none;
+  float: left;
+  background: url("../images/search.jpg") no-repeat;
+}
+
+#searchList table {
+  display: inline-block;
+  width: 1140px;
+  height: 215px;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  position: relative;
+  border-spacing: 15px;
+  border-collapse: collapse;
+}
+
+#searchList table tr td {
+  width: 110px;
+  height: 35px;
+}
+
+#searchList table tr td span {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+}
+
+#searchList ul {
+  display: inline-block;
+  width: 1140px;
+  padding: 0 30px;
+  height: 40px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  background-color: #fbfbfb;
+}
+
+#searchList ul li {
+  list-style: none;
+  float: left;
+  margin-right: 30px;
+}
+
+#searchList ul .liLast {
+  float: right;
+}
+
+#searchList ul li span {
+  color: red;
+}
+
+#searchList .goods {
+  width: 1200px;
+  padding: 10px 0px;
+  height: 6360px;
+  position: relative;
+}
+
+#searchList .goods dl {
+  display: inline-block;
+  width: 283px;
+  height: 398px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+}
+
+#searchList .goods dl:hover {
+  box-shadow: 0px 0px 8px red;
+}
+
+#searchList .goods .dlRight {
+  margin-right: 0;
+}
+
+#searchList .goods dl dd {
+  width: 233px;
+  padding: 0 25px;
+  margin-top: 11px;
+}
+
+#searchList .goods dl dd b {
+  color: red;
+  font-size: 20px;
+}
+
+#searchList .goods dl dd del {
+  color: blue;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+#searchList .goods dl dd span {
+  color: red;
+}
+
+#searchList .goods dl div {
+  width: 283px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 230px;
+  left: 0px;
+  display: none;
+}
+
+#searchList .goods .padings {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 310px;
+  height: 30px;
+}
+
+#searchList .goods .padings a {
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=details.css.map */

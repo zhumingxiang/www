@@ -85,6 +85,7 @@ $(function(){
             $("#cartList .bottom .cartP1 span").html( $("#cartList .cartSpan").html() );
         }
         if( $(this)[0].checked==false ){
+            $("#cartList .bottom input:checkbox").removeAttr("checked");
             $("#cartList .bottom b").html( 0 );
             $("#cartList .bottom .cartP1 span").html( 0 );
         }
@@ -93,9 +94,15 @@ $(function(){
     //全选功能
     console.log($("#cartList input:checkbox"));
     $("#cartList .bottom input:checkbox").bind("click",function(){
-        $("#cartList .top div").children("input:checkbox").attr({checked:"checked"});
-        $("#cartList .bottom b").html( $("#cartList .top .cs2").html() );
-        $("#cartList .bottom .cartP1 span").html( $("#cartList .cartSpan").html() );
+       if( $(this).is(":checked")==true ){
+           $("#cartList .top input:checkbox").attr({checked:"checked"});
+           $("#cartList .bottom b").html( $("#cartList .top .cs2").html() );
+           $("#cartList .bottom .cartP1 span").html( $("#cartList .cartSpan").html() );
+       }else if( $(this).is(":checked")==false ){
+           //$("#cartList .top input:checkbox").removeAttr("checked");
+           $("#cartList .bottom b").html( "0" );
+           $("#cartList .bottom .cartP1 span").html( "0" );
+       }
     });
 
     //删除选中商品

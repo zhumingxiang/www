@@ -79,8 +79,9 @@ $(".codeDiv1 input:button:first").bind("click",function(){
         return false;
     }
     if( $(".codeDiv1 input:checkbox").eq(0).is(":checked")==true ){
-        $.cookie.setAll("user1",{ user1Photo:$(".codeDiv1 input:text").eq(0).val(),user1Password:$(".codeDiv1 input:password").eq(0).val() },_getDate(21));
-        $(".codeDiv1 input:text,input:password").val("");
+        $.cookie.setAll("user1",{ user1Photo:$(".codeDiv1 input:text").eq(0).val(),user1Password:$(".codeDiv1 input:password").eq(0).val() },_getDate(21) );
+        $(".codeDiv1 input:text").val("");
+        $(".codeDiv1 input:password").val("");
         window.open("login.html");
     }
 });
@@ -106,7 +107,8 @@ $(".codeDiv1 input:button:first").bind("click",function(){
             if( $.cookie.getAll("user1").user1Password==$("#register .codeDiv2 input:password").eq(0).val() ){
                 $("#register .reg .codeP6").eq(0).css("display","none");
                 alert("登录成功");
-                $(".codeDiv2 input:text,input:password").val("");
+                $(".codeDiv2 input:text").val("");
+                $(".codeDiv2 input:password").val("");
                 window.open("../index.html");
             }
         }
