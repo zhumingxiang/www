@@ -2,51 +2,10 @@
  * Created by Administrator on 2016/9/28.
  */
 $(function(){
-    //弹窗功能
-    $(function(){
-        new Cpm().init();
-    });
-    function Cpm(){
-        this.target=$("<div></div>");
-    }
-    Cpm.prototype={
-        init:function(){
-            $(document.body).append(this.target);
-            this.initposition();
-        },
-        initposition:function(){
-            this.target.html("亲爱的！<br/><br/>达令网（亲爱的网）<br/><br/>你的爱！<br/><br/>（9秒后广告自动消失）<br/><br/>或者(单击去广告)");
-            this.target.css({ borderRadius:"5px",
-                width:"150px",height:"200px",
-                backgroundColor:"yellow",
-                zIndex:"1001",
-                padding:"50px",
-                position:"fixed",
-                left:"1070px",
-                opacity:0,
-                cursor: "pointer",
-                top:"50px"
-            });
-            this.move();
-        },
-        move:function(){
-            var _this=this;
-            this.target.animate({ opacity:1 },2000,function(){
-                setTimeout(function(){
-                    _this.target.remove();
-                },9*1000);
-                $(_this.target).bind("click",function(){
-                    _this.target.remove();
-                });
-            })
-        }
-    }
-
     //动态获取注册用户名
     //console.log( $("#top ul li:first").children("a").html() );
     //console.log( $.cookie.getAll("user1").user1Photo );
    //$("#top ul li:first").children("a").html( $.cookie.getAll("user1") );
-
     //搜索框功能
     var availableTags = [
         "ActionScript",
@@ -184,19 +143,20 @@ $(function(){
     });
 
     //侧边栏商品数量的获取与写入
-        var _goodsPieces=0;
+        var goodsPieces=0;
         $(" #find .divCart1 ").bind("click",function(e){
             e=e||event;
             new Fire().init(e);
-
-            var _imgSrc="../images/new2.jpg";
-            var _goodsName = "[台湾 · 喝出天使容颜] Simply 纯正零添加特浓黑豆水(30g)";
-            var _goodsPrice= "￥39.80";
-            _goodsPieces++;
-            //$.cookie.setAll("goods1",{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
+            var _id=$(this).attr("id");
+            var _imgSrc="../"+$(this).parent().find("img").eq(0).attr("src");
+            var _goodsName = $(this).parent().find(".userA").eq(0).html();
+            var _goodsPrice= $(this).parent().find("b").eq(0).html();
+            var _goodsPieces=1;
+            console.log(_goodsPrice);
+            goodsPieces++;
+            $.cookie.setAll(_id,{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces });
             setTimeout(function(){
-                //$("#sidebar ul li span").eq(0).html($.cookie.getAll("goods1").goodsPieces);
-                $("#sidebar ul li span").eq(0).html(_goodsPieces);
+                $("#sidebar ul li span").eq(0).html(goodsPieces);
             },2*1000);
 
         });

@@ -74,7 +74,7 @@ function ispassword(){
 //console.log($(".codeDiv1 input:button:first").val());
 var textValues=$(".codeDiv1 input:text").val();
 textValues="";
-$(".codeDiv1 input:button:first").bind("click",function(){
+$(".codeDiv1 input:button:first").bind("click",function(e){
     if(  !isPhotonumber() || !ischeck() || !ispassword() ){
         return false;
     }
@@ -82,9 +82,46 @@ $(".codeDiv1 input:button:first").bind("click",function(){
         $.cookie.setAll("user1",{ user1Photo:$(".codeDiv1 input:text").eq(0).val(),user1Password:$(".codeDiv1 input:password").eq(0).val() },_getDate(21) );
         $(".codeDiv1 input:text").val("");
         $(".codeDiv1 input:password").val("");
-        window.open("login.html");
+        e=e||event;
+        new Fire().init(e);
     }
+
 });
+    function Fire(){
+        this.target=$("<div><p>注册成功</p><a href='../html/login.html'>去登录</a></div>");
+    }
+    Fire.prototype={
+        init:function(e){
+            $(document.body).append(this.target);
+            this.initposition(e);
+        },
+        initposition:function(e){
+            e=e||event;
+            this.target.css({
+                width:"100px",
+                height:"100px",
+                padding:"50px",
+                textAlign: "center",
+                backgroundColor:"#ccc",
+                color:"red",
+                zIndex:"1000",
+                position:"absolute",
+                fontSize:"20px",
+                left: "0px",
+                top: "20px"
+            });
+            this.move(e);
+        },
+        move:function(e){
+            var _this=this;
+            this.target.animate({ top: e.pageY-450,left:(document.body.offsetWidth-100)/2 },2000,function(){
+                _this.target.animate({ padding:150 },2000);
+                setTimeout(function(){
+                    _this.target.animate({ padding:"50px",width:"100px",height:"100px",borderRadius:"50%" },2000);
+                },3000);
+            })
+        }
+    }
 
 //登录与注册切换
     $("#register .reg ul li").bind("click",function(){
@@ -114,6 +151,7 @@ $(".codeDiv1 input:button:first").bind("click",function(){
         }
 
     });
+
 
 });
 function _getDate(num){

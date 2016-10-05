@@ -1082,4 +1082,52 @@ img {
   line-height: 30px;
 }
 
+#sidebar2 {
+  width: 40px;
+  height: 800px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+#sidebar2 ul {
+  width: 40px;
+  height: auto;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  right: 0;
+}
+
+#sidebar2 ul img {
+  position: relative;
+  right: 10px;
+}
+
+#sidebar2 ul li {
+  list-style: none;
+  width: 40px;
+  height: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#sidebar2 ul li:hover {
+  background-color: #dc4b5c;
+}
+
+#sidebar2 ul li a {
+  display: inline-block;
+  width: 20px;
+  color: #fff;
+}
+
+#sidebar2 ul li a span {
+  color: red;
+}
+
 /*# sourceMappingURL=details.css.map */

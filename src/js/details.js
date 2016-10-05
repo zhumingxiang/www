@@ -108,16 +108,59 @@ $(function(){
     });
 
     //写入cookies 图片路径 名称 价格 数量
-    $("#addToCart a").eq(1).click(function(){
+    $("#addToCart a").eq(1).click(function(e){
+        var _snoId=$(this).attr("id");
         var _imgSrc=$("#big img:first").attr("src");
         var _goodsName = $("#center h2").html();
         var _goodsPrice= $("#price span:first").html();
         console.log($(".pieces span:first").html());
         var _goodsPieces=$(".pieces span:first").html();
-        $.cookie.setAll("goods1",{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
-        //window.open("cart.html");
-        alert("添加购物车成功");
+        $.cookie.setAll(_snoId,{ imgSrc:_imgSrc, goodsName:_goodsName, goodsPrice:_goodsPrice,goodsPieces:_goodsPieces  },_getDate(21));
+
+        e=e||event;
+        new Fire().init(e);
+
     });
+        function Fire(){
+            this.target=$("<div><p>加入购物车成功</p><a href='cart.html'>去购物车</a></div>");
+        }
+        Fire.prototype={
+            init:function(e){
+                $(document.body).append(this.target);
+                this.initposition(e);
+            },
+            initposition:function(e){
+                e=e||event;
+                this.target.css({
+                    width:"100px",
+                    height:"100px",
+                    padding:"50px",
+                    textAlign: "center",
+                    backgroundColor:"#ccc",
+                    color:"red",
+                    zIndex:"1000",
+                    position:"absolute",
+                    fontSize:"20px",
+                    left: "0px",
+                    top: "20px"
+                });
+                this.move(e);
+            },
+            move:function(e){
+                var _this=this;
+                this.target.animate({ top: e.pageY-450,left:(document.body.offsetWidth-100)/2 },2000,function(){
+                    _this.target.animate({ padding:150 },2000);
+                    setTimeout(function(){
+                        _this.target.animate({ padding:"50px",width:"100px",height:"100px",borderRadius:"50%" },2000);
+                    },3000);
+                    //window.open("cart.html");
+                    //console.log($(this).parent().html());
+                })
+            }
+        }
+
+
+
 
     //tab功能（li的移上事件）
     $("#main .detailsUl li").bind("click",function(){
@@ -126,7 +169,6 @@ $(function(){
         $("#main .details").css("zIndex","0");
         $("#main .details").eq($(this).index()).css("zIndex","10");
     });
-
 
 
 });
